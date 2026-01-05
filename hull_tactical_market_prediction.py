@@ -1,5 +1,3 @@
-# train_and_save_artifacts.py
-
 import os
 import warnings
 from typing import List, Tuple
@@ -15,7 +13,6 @@ import joblib
 from pathlib import Path
 from sklearn.utils.validation import check_X_y, check_array
 warnings.filterwarnings("ignore")
-
 
 # =============================================================================
 # 0. Global config
@@ -229,7 +226,7 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # =============================================================================
-# 3. Sequence切片 (for GRU / Transformer)
+# 3. Sequence for GRU / Transformer
 # =============================================================================
 def make_sequences(
     X: np.ndarray,
@@ -473,7 +470,7 @@ def time_series_folds(
 
 
 # =============================================================================
-# 7. 超参调优：HTMP 上的 CatBoost / GRU / Transformer
+# 7. Hyperparameter Tuning：CatBoost / GRU / Transformer
 # =============================================================================
 def tune_catboost_htmp(
     X: np.ndarray,
@@ -527,7 +524,7 @@ def tune_catboost_htmp(
         eval_metric="RMSE",
         random_seed=42,
         task_type="CPU",
-        iterations=None,                 # CPU 可适当给高一点上限，仍会 early stop
+        iterations=None,                
         early_stopping_rounds=None,
         verbose=False,
         allow_writing_files=False,
@@ -1493,3 +1490,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
