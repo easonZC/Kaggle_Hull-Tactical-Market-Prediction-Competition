@@ -1,6 +1,6 @@
 # Hull Tactical Market Prediction (HTMP)
 
-This repository contains the advanced machine learning pipeline used for the Hull Tactical Market Prediction project. The system employs a sophisticated ensemble of Gradient Boosting (CatBoost) and Deep Learning (GRU, Transformer) models, enhanced by Genetic Programming for feature engineering.
+This repository contains the advanced machine learning pipeline used for the Hull Tactical Market Prediction Competition. The system employs a sophisticated ensemble of Gradient Boosting (CatBoost) and Deep Learning (GRU, Transformer) models, enhanced by Genetic Programming for feature engineering.
 
 ## Key Features
 
@@ -63,3 +63,4 @@ The script will generate artifacts in the `./artifacts` directory, including:
 ## License
 
 [Your License Here]
+
